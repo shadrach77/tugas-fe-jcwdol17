@@ -2,10 +2,14 @@
 
 import React from "react";
 import { IProduct } from "@/interfaces/product.interface";
+import Link from "next/link";
 
 export default function CardComponent(product: IProduct) {
   return (
-    <div className="card bg-base-100 w-full shadow-xl">
+    <Link
+      href={"/product/" + product.slug}
+      className="card bg-base-100 w-full shadow-xl"
+    >
       <figure>
         <img src={product.img} alt="Shoes" />
       </figure>
@@ -17,6 +21,6 @@ export default function CardComponent(product: IProduct) {
           <button className="btn btn-primary">Add to Card</button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

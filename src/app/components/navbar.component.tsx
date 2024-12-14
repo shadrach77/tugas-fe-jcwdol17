@@ -1,5 +1,6 @@
 /** @format */
 
+import Link from "next/link";
 import React from "react";
 
 export default function NavbarComponent() {
@@ -7,7 +8,9 @@ export default function NavbarComponent() {
     <div className="navbar bg-black flex justify-center sticky top-0 z-10">
       <div className="w-full max-w-screen-xl flex gap-3">
         <div className="flex-none">
-          <a className="btn btn-ghost text-xl">Nama Toko</a>
+          <Link href={"/"} className="btn btn-ghost text-xl">
+            Nama Toko
+          </Link>
         </div>
         <div className="w-full">
           <input
